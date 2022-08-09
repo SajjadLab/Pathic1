@@ -35,7 +35,7 @@ router.route("/Pathic").get(async (req, res) => {
 // This section will help you get a single record by id
 router.route("/Pathic/:id").get(async (req, res) => {
   try {
-    const tgjs = await TemporalGeoJson.findById({ObjectId( req.params.id )});
+    const tgjs = await TemporalGeoJson.findById(req.params.id);
     res.status(200).json(tgjs);
   }
   catch (err) {
