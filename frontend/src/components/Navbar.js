@@ -25,7 +25,7 @@ class PathicNavbar extends Component {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="justify-content-end ms-auto">
-                <Nav.Link as={Link} to={"/#about"}>About</Nav.Link>
+                <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
                 <Nav.Link as={Link} to={"/pathic"}>Pathic</Nav.Link>
                 <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
                 <Nav.Link as={Link} to={"/contact"}>Contact</Nav.Link>

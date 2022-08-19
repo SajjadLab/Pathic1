@@ -4,11 +4,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./index.css"
 
 // Import pages
-import Home from "./components/Home.js"
-import Map from "./components/Map.js";
+import Home from "./pages/Home.js"
+import Pathic from "./pages/Pathic.js";
+import About from "./pages/About.js";
+//import Map from "./components/Map.js";
 
 // Import global components
-//import PathicNavbar from "./components/Navbar.js";
+import PathicNavbar from "./components/Navbar.js";
 
 
 class App extends Component {
@@ -19,8 +21,10 @@ class App extends Component {
             - Home page
               - header
               - about
-              - projects
               - blog
+            - About Sajjad page
+              - about
+              - projects
               - contact
             - Pathic
               - Map
@@ -28,9 +32,11 @@ class App extends Component {
               - infobox
           */}
         <BrowserRouter>
+          <PathicNavbar />
           <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="pathic" element={<Map />} />
+            <Route path="about" element={<About /> } />
+            <Route path="pathic" element={<Pathic />} />
           </Routes>
         </BrowserRouter>
       </div>

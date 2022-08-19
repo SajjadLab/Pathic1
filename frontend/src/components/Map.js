@@ -8,7 +8,7 @@ import { Component } from "react";
 //import Row from "react-bootstrap/Row";
 //import Col from "react-bootstrap/Col";
 
-//import PathicNavbar from "./Navbar.js"
+import PathicNavbar from "./Navbar.js"
 
 Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhOGJjN2E4MC0wZmFmLTRlMjEtYWMwZi1lZjRjMWU2NGRkNDciLCJpZCI6MTA0NTUyLCJpYXQiOjE2NjAyOTUxMDF9.4NgroU9rZOF3EWRyWlc4UYXZ-8g-TGTjbCyiWMf5FIg";
 
@@ -49,6 +49,7 @@ class Map extends Component {
   render () {
     return (
       <div>
+        <PathicNavbar />
         <div id="cesiumContainer">
           <Viewer
             ref={ref => { this.viewerComponent = ref; }}
@@ -75,7 +76,7 @@ class Map extends Component {
               */}
             <GeoJsonDataSource
               clampToGround={true}
-              data={"http://192.168.0.99:5050/Pathic"}
+              data={this.props.tgjs}
               onLoad={g => {
                 const entities = g.entities.values;
 
@@ -94,6 +95,7 @@ class Map extends Component {
                   entity.label = {text:entity.name, scaleByDistance:new NearFarScalar(1e5, 0.6, 5e5, 0)};
                 }
               }}
+              onClick={(moment, entity) => { this.viewerComponent.zoomTo(entity); }}
             />
 
             {/*Edit scene to highlight hovered entities*/}

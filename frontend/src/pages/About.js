@@ -1,17 +1,21 @@
 import { Component } from "react";
 import headshot from "../assets/img/headshot.jpg";
-import terrain from "../assets/img/cesiumTerrain.jpg"
+import terrain from "../assets/img/cesiumTerrain.jpg";
+import ubcsigil from "../assets/img/UBCsigil.png";
+import sabis from "../assets/img/sabis.png";
 
-class Home extends Component {
+import Carousel from "react-bootstrap/Carousel";
+
+class About extends Component {
   render () {
     return (
-      <div className="home">
+      <div className="aboutContainer">
         {/*Masthead*/}
         <header className="masthead">
             <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
                 <div className="d-flex justify-content-center">
                     <div className="text-center">
-                        <h1 className="mx-auto my-0 text-uppercase">Hi, my name is Sajjad</h1>
+                        <h1 className="mx-auto my-0 text-uppercase">Hi, I'm Sajjad</h1>
                         <h2 className="text-white-50 mx-auto mt-2 mb-5">I am an Electrical Engineering student at UBC with an interest in programming, web-design, computational knowledge, and history</h2>
                         <a className="btn btn-primary" id="headshot-button" href="#about">
                           <img id="headshot-button-img" src={headshot} alt="headshot" />
@@ -32,12 +36,25 @@ class Home extends Component {
                         </p>
                     </div>
                 </div>
-                <img className="img-fluid" id="terrain" src={terrain} alt="terrain" />
             </div>
+
+          <Carousel>
+            <Carousel.Item>
+              <div id="carouselEducation">
+                <img className="img-fluid" id="carouselImage" src={ubcsigil} alt="ubc" />
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div id="carouselEducation">
+                <img className="img-fluid" id="carouselImage" src={sabis} alt="sabis erbil" />
+              </div>
+            </Carousel.Item>
+
+          </Carousel>
         </section>
       </div>
     );
   }
 }
 
-export default Home;
+export default About;
