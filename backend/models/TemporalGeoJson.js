@@ -1,24 +1,23 @@
-const mongoose = require("mongoose");
-const Schema = mongoose.Schema;
+import mongoose from "mongoose";
+const { Schema } = mongoose;
 
 // This is the schema for GeoJson polygon object
 // that relate to terraperiums during a period of time
 const TemporalGeoJsonSchema = new Schema({
-  type: {
+  type: { // Type of geojson
     type: String,
     enum: ['Feature'],
     required:true
   },
-  // The following are properties that help identify
-  // a polygon with its time period and terraperium
-  properties: {
-    name: String,
-    startDate: Date,
-    endDate: Date,
-    relatedTerraperiums: [String]
+  properties: { // temporal properties and all relationships with terraperiums/other
+    name: { type: Schema.Types.ObjectId, ref: "name" }, // link to Property of type String
+    startDate: { type: Schema.Types.ObjectId, ref: "startDate" }, // link to Property of type FuzzyDate
+    endDate: { type: Schema.Types.ObjectId, ref: "endDate" }, // link to Property of type FuzzyDate
+    entities: [{ type: Schema.Types.ObjectId, ref: "entity" }], // link to objects through Tempaths
+    area: Number,
+    center: [Number]
   },
-  // Defines the actual geometry (polygon)
-  geometry: {
+  geometry: { // geojson geometry
     type: {
       type: String,
       enum: ['MultiPolygon'],
@@ -31,4 +30,5 @@ const TemporalGeoJsonSchema = new Schema({
   }
 });
 
-module.exports = TemporalGeoJson = mongoose.model("TemporalGeoJson", TemporalGeoJsonSchema);
+const TemporalGeoJson = mongoose.model("TemporalGeoJson", TemporalGeoJsonSchema);
+export default TemporalGeoJson

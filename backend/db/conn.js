@@ -1,9 +1,8 @@
-const MongoClient = require("mongodb").MongoClient;
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const uri = "mongodb://localhost:27017/Pathic";
 var _db;
-module.exports = {
+const dbo = {
   connectToServer: function(callback) {
     _db = mongoose.connect(uri).
       catch(err => handleError(err));
@@ -14,3 +13,5 @@ module.exports = {
     return _db;
   },
 };
+
+export default dbo

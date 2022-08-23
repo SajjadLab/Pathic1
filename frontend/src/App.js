@@ -10,7 +10,7 @@ import About from "./pages/About.js";
 //import Map from "./components/Map.js";
 
 // Import global components
-import PathicNavbar from "./components/Navbar.js";
+//import PathicNavbar from "./components/Navbar.js";
 
 
 class App extends Component {
@@ -32,7 +32,6 @@ class App extends Component {
               - infobox
           */}
         <BrowserRouter>
-          <PathicNavbar />
           <Routes>
             <Route path="/" element={<Home />}/>
             <Route path="about" element={<About /> } />
