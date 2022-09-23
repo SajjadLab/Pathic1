@@ -5,11 +5,14 @@ import express from "express";
 const tgjRouter = express.Router();
  
 // import controllers
-import { getAllTGJ, getOneTGJ, addOneTGJ } from "../controllers/tgjController.js";
+import { getAllTGJ, getOneTGJ, addOneTGJ, getAnnualTGJ } from "../controllers/tgjController.js";
 
  
 // get a list of all the records.
 tgjRouter.get("/Pathic", getAllTGJ);
+
+// get a list of all records in a year
+tgjRouter.get("/Pathic/year/:id", getAnnualTGJ)
  
 // get a single record by id
 tgjRouter.get("/Pathic/:id", getOneTGJ);

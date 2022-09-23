@@ -11,18 +11,20 @@ class PathicNavbar extends Component {
    return (
     <Navbar className={(this.props.scrollPosition === 0) ? "":"navbar-shrink"} fixed="top" expand="lg" id="mainNav">
       <Container className="px-4 px-lg-5">
-        <Navbar.Brand as={Link} to="/">Sajjad Al-Kazzaz</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-end ms-auto">
             <Nav.Item>
+              {/*
               <Form>
                 <Form.Control placeholder="search" />
               </Form>
+               */}
             </Nav.Item>
             <Nav.Link as={Link} to={"/pathic"}>Pathic</Nav.Link>
             <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
-            <Nav.Link as={Link} to={"/about"}>Sajjad</Nav.Link>
+            <Nav.Link as={Link} to={"/about"}>About the Creator</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>

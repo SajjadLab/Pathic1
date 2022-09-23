@@ -9,7 +9,7 @@ const PropertySchema = new Schema({
         required: true
     },
     type: { // should be either a standard mongodb type or a custom model
-        type: String,
+        type: String, // add enumerate
         required: true
     },
     empaticProperties: { // list of empathic properties

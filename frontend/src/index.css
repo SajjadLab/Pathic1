@@ -21,9 +21,9 @@
 }
 
 .pathic-about-section {
-  padding: 5rem 0;
+  padding: 12rem 0;
   background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
-  min-height: 30rem;
+  min-height: 100vh;
 }
 
 /*

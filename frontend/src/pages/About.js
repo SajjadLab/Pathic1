@@ -1,15 +1,34 @@
 import { Component } from "react";
+import React, { useState, useEffect } from "react";
+import PathicNavbar from "../components/Navbar.js";
+
+// Bootstrap
+import Carousel from "react-bootstrap/Carousel";
+
+// Images
 import headshot from "../assets/img/headshot.jpg";
-import terrain from "../assets/img/cesiumTerrain.jpg";
 import ubcsigil from "../assets/img/UBCsigil.png";
 import sabis from "../assets/img/sabis.png";
 
-import Carousel from "react-bootstrap/Carousel";
+function About() {
+  const [scrollPosition, setScrollPosition] = useState(0);
 
-class About extends Component {
-  render () {
-    return (
+  useEffect(() => {
+    const handleScroll = e => {
+      setScrollPosition(window.scrollY);
+      console.log(scrollPosition);
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  })
+
+  return (
       <div className="aboutContainer">
+      <PathicNavbar scrollPosition={scrollPosition}/>
         {/*Masthead*/}
         <header className="masthead">
             <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
@@ -52,9 +71,45 @@ class About extends Component {
 
           </Carousel>
         </section>
+
+      <section class="contact-section bg-black">
+            <div class="container px-4 px-lg-5">
+                <div class="row gx-4 gx-lg-5">
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fab fa-github text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Github</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="https://github.com/SajjadLab">SajjadLab</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fas fa-envelope text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">Email</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="alkazzazsajjad@gmail.com">alkazzazsajjad@gmail.com</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3 mb-md-0">
+                        <div class="card py-4 h-100">
+                            <div class="card-body text-center">
+                                <i class="fab fa-linkedin text-primary mb-2"></i>
+                                <h4 class="text-uppercase m-0">LinkedIn</h4>
+                                <hr class="my-4 mx-auto" />
+                                <div class="small text-black-50"><a href="www.linkedin.com/in/sajjadalkazzaz">Chat with me</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
       </div>
-    );
-  }
+  );
 }
 
 export default About;

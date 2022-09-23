@@ -1,9 +1,9 @@
-import { ObjectId } from "mongodb";
 import mongoose, { Schema } from "mongoose";
-import FuzzyDate from "./FuzzyDate";
+import Property from "./Property";
 
 // Interpretation object for relating perspective
 const EmpathSchema = new Schema({
+    source: { type: Schema.types.ObjectId, ref: "source" },
     referenceGroup: { // Organizational location of the highlight
         heirarchy: String,
         value: String
@@ -16,20 +16,21 @@ const EmpathSchema = new Schema({
         type: String,
         required: true
     },
-    interpretor: { // The individual interprating the highlight
+    interpreter: { // The individual interprating the highlight
         type: String,
         required: true
     },
     interpretationDate: { // When this object was interpreted
-        type: FuzzyDate,
+        type: Property, // type FuzzyDate
         required: true
     },
-    entities: { // related entities that derive meaning from this empath
-        type: [ObjectId],
-        required: false
-    },
+    entities: [
+        { type: Schema.Types.ObjectId, ref: "entity" }
+    ],
     tags: { // Query tags
         type: [String],
         required: false
     }
 })
+
+module.exports = Empath = mongoose.model("Empath", EmpathSchema);

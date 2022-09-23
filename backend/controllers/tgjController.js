@@ -17,6 +17,27 @@ const getAllTGJ = async (req, res) => {
   }
 }
 
+// get all tgj records in a year
+const getAnnualTGJ = async (req, res) => {
+    const year = req.params.id;
+    try {
+        const tgjs = await TemporalGeoJson.find({})
+                            .populate({
+                                path: "startDate",
+                                match: { empathicProperties: { value: { startDate: { $lte: year } } } }
+                            })
+                            .populate({
+                                path: "endDate",
+                                match: { empathicProperties: { value: { endDate: { $gte: year } } } }
+                            })
+        res.status(200).json(tgjs);
+    }
+    catch (err) {
+        console.log(err);
+        res.status(500).json(err);
+    }
+}
+
 // get tgj by id
 const getOneTGJ = async (req, res) => {
   try {
@@ -43,4 +64,4 @@ const addOneTGJ = async (req, res) => {
   }
 }
 
-export { getAllTGJ, getOneTGJ, addOneTGJ };
+export { getAllTGJ, getOneTGJ, addOneTGJ, getAnnualTGJ };
