@@ -1,11 +1,18 @@
 import mongoose from "mongoose";
 
-const uri = "mongodb://localhost:27017/Pathic";
+const uri = "mongodb+srv://sajjad:C3CLpUFnJ!FaGH9@pathic1.nnk5x.mongodb.net/?retryWrites=true&w=majority";
 var _db;
 const dbo = {
   connectToServer: function(callback) {
-    _db = mongoose.connect(uri).
-      catch(err => handleError(err));
+    try {
+    _db = mongoose.connect(
+      uri,
+      { useNewUrlParser: true, useUnifiedTopology: true },
+      () => console.log(" Mongoose is connected"))
+    }
+    catch(err) {
+      console.log(err);
+    };
     console.log("Successfully connected to MongoDB");
   },
 
