@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Container from "react-bootstrap/Container"
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import Form from "react-bootstrap/Form";
+//import Form from "react-bootstrap/Form";
 
 class PathicNavbar extends Component {
 
@@ -20,10 +20,10 @@ class PathicNavbar extends Component {
               <Form>
                 <Form.Control placeholder="search" />
               </Form>
-            <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
                */}
             </Nav.Item>
             <Nav.Link as={Link} to={"/pathic"}>Pathic</Nav.Link>
+            <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
             <Nav.Link as={Link} to={"/about"}>About the Creator</Nav.Link>
 
           </Nav>

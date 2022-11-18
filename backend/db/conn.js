@@ -1,11 +1,11 @@
 import mongoose from "mongoose";
 
-const uri = "mongodb+srv://sajjad:C3CLpUFnJ!FaGH9@pathic1.nnk5x.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://sajjad:Fisherman_545217@pathic1.nnk5x.mongodb.net/?retryWrites=true&w=majority";
 var _db;
 const dbo = {
-  connectToServer: function(callback) {
+  connectToServer: async function(callback) {
     try {
-    _db = mongoose.connect(
+    _db = await mongoose.connect(
       uri,
       { useNewUrlParser: true, useUnifiedTopology: true },
       () => console.log(" Mongoose is connected"))
