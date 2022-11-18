@@ -20,10 +20,10 @@ class PathicNavbar extends Component {
               <Form>
                 <Form.Control placeholder="search" />
               </Form>
+            <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
                */}
             </Nav.Item>
             <Nav.Link as={Link} to={"/pathic"}>Pathic</Nav.Link>
-            <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
             <Nav.Link as={Link} to={"/about"}>About the Creator</Nav.Link>
 
           </Nav>

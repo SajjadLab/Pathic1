@@ -7,7 +7,9 @@ import "./index.css"
 import Home from "./pages/Home.js"
 import Pathic from "./pages/Pathic.js";
 import About from "./pages/About.js";
+import BlogHome from "./pages/BlogHome.js";
 //import Map from "./components/Map.js";
+import BlogNav from "./components/BlogNav.js"
 
 // Import global components
 //import PathicNavbar from "./components/Navbar.js";
@@ -24,12 +26,17 @@ class App extends Component {
               - blog
             - About Sajjad page
               - about
-              - projects
               - contact
             - Pathic
               - Map
               - Timeline
               - infobox
+            - Blog
+              - /blog post
+              <Route path=":blogPost" element={<BlogPost />} />
+            <Route path="blog" element={<BlogNav />} >
+              <Route path="" element={<BlogHome />} />
+            </Route>
           */}
         <BrowserRouter>
           <Routes>

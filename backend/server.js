@@ -6,6 +6,7 @@ import express from "express";
 import cors from "cors";
 import dbo from "./db/conn.js";
 import tgjRouter from "./routes/tgjRecords.js";
+import blogRouter from "./routes/blogRecords.js";
 
 // Initialization
 const app = express();
@@ -15,6 +16,7 @@ const port = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 app.use(tgjRouter);
+app.use(blogRouter);
 
 
 app.listen(port, () => {
