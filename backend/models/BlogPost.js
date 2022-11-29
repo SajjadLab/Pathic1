@@ -6,8 +6,20 @@ const BlogPostSchema = new Schema({
         type: String,
         required: true
     },
+    author: {
+        type: String,
+        required: true
+    },
     content: {
         type: String,
+        required: true
+    },
+    summary: {
+        type: String,
+        required: true
+    },
+    publicationDate: {
+        type: Date,
         required: true
     }
 })

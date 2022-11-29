@@ -1,0 +1,95 @@
+#blogHomeContainer {
+  background-color: black;
+  height: auto;
+  padding-bottom: 3rem;
+}
+
+#blogList {
+  justify-content: center;
+  margin: 0 auto;
+  padding-top: 10rem;
+  text-align: center;
+  width: 50%;
+}
+
+#blogList > .card {
+  margin: 3rem 0;
+  padding: 1rem;
+}
+
+#blogPostContainer {
+  background-color: black;
+  min-height: 100vh;
+  height: auto;
+}
+
+@media only screen and (min-width: 1200px) {
+  #blogContent {
+    justify-content: center;
+    margin: 0 auto;
+    width: 70%;
+    padding: 7.5rem 3rem 2rem;
+    color: white;
+  }
+
+  #blogContent > h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  #blogContent > h6 {
+    padding: 0.5rem 3rem;
+  }
+
+  #blogContent > p {
+    padding: 2rem 4rem;
+    font-size: large;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  #blogContent {
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+    padding: 7.5rem 2rem 2rem;
+    color: white;
+  }
+
+  #blogContent > h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  #blogContent > h6 {
+    padding: 0.5rem 3rem;
+  }
+
+  #blogContent > p {
+    padding: 2rem 4rem;
+    font-size: large;
+  }
+}
+
+#blogContent {
+  justify-content: center;
+  margin: 0 auto;
+  width: 95%;
+  padding: 7.5rem 1rem 2rem;
+  color: white;
+}
+
+#blogContent > h1 {
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+#blogContent > h6 {
+  padding: 0.25rem 0.75rem;
+  font-size: small;
+}
+
+#blogContent > p {
+  padding: 1rem 0.5rem;
+  font-size: medium;
+}

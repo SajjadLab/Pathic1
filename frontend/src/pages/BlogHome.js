@@ -1,4 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 // Components
 import PathicNavbar from "../components/Navbar.js";
@@ -29,21 +32,27 @@ function BlogHome() {
         setBlogPosts(data);
 
         const contentProcessing = data.map((post) =>
-            <div key={post.id}>
-                <h3>{post.title}</h3>
-                <p>{post.content}</p>
-            </div>)
+            <Card className={post._id}>
+              <Card.Body>
+                <Card.Title>{post.title}</Card.Title>
+                <Card.Text>{post.summary}</Card.Text>
+                <Button as={Link} to={"/blog/" + post._id}variant="primary">See more</Button>
+              </Card.Body>
+            </Card>
+            )
         setContent(contentProcessing)
       })
     }
   })
 
   return (
-    <div className='blogContainer'>
+    <div id="blogHomeContainer">
       {/*add navbar and pass scrollPosition */}
       <PathicNavbar scrollPosition={scrollPosition}/>
 
-      {content}
+      <div id="blogList">
+        {content}
+      </div>
     </div>
   )
 }
