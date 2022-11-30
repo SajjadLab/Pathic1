@@ -1,15 +1,23 @@
 #blogHomeContainer {
-  background-color: black;
+  background: rgb(24,1,1);
+  background: linear-gradient(175deg, rgba(24,1,1,1) 0%, rgba(26,9,79,1) 43%, rgba(131,209,156,1) 100%);
+  min-height: 100vh;
   height: auto;
   padding-bottom: 3rem;
+}
+
+#blogHomeContainer > h1 {
+  padding-top: 8rem;
+  text-align: center;
+  color: white;
 }
 
 #blogList {
   justify-content: center;
   margin: 0 auto;
-  padding-top: 10rem;
+  padding-top: 2rem;
   text-align: center;
-  width: 50%;
+  width: 80%;
 }
 
 #blogList > .card {
@@ -17,58 +25,58 @@
   padding: 1rem;
 }
 
+@media (min-width: 576px) {
+  #blogHomeContainer {
+    background: rgb(24,1,1);
+    background: linear-gradient(175deg, rgba(24,1,1,1) 0%, rgba(26,9,79,1) 43%, rgba(131,209,156,1) 100%);
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  #blogList {
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 4rem;
+    text-align: center;
+    width: 60%;
+  }
+
+  #blogList > .card {
+    margin: 3rem 0;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  #blogHomeContainer {
+    background: rgb(24,1,1);
+    background: linear-gradient(175deg, rgba(24,1,1,1) 0%, rgba(26,9,79,1) 43%, rgba(131,209,156,1) 100%);
+    min-height: 100vh;
+    height: auto;
+    padding-bottom: 3rem;
+  }
+
+  #blogList {
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 4rem;
+    text-align: center;
+    width: 40%;
+  }
+
+  #blogList > .card {
+    margin: 3rem 0;
+    padding: 1rem;
+  }
+}
+
+/*Blog content page and dynamic sizing*/
 #blogPostContainer {
-  background-color: black;
+  background: rgb(222,10,10);
+  background: linear-gradient(175deg, rgba(222,10,10,1) 0%, rgba(26,9,79,1) 43%, rgba(131,209,156,1) 100%);
   min-height: 100vh;
   height: auto;
-}
-
-@media only screen and (min-width: 1200px) {
-  #blogContent {
-    justify-content: center;
-    margin: 0 auto;
-    width: 70%;
-    padding: 7.5rem 3rem 2rem;
-    color: white;
-  }
-
-  #blogContent > h1 {
-    text-align: center;
-    padding-bottom: 1rem;
-  }
-
-  #blogContent > h6 {
-    padding: 0.5rem 3rem;
-  }
-
-  #blogContent > p {
-    padding: 2rem 4rem;
-    font-size: large;
-  }
-}
-
-@media only screen and (min-width: 450px) {
-  #blogContent {
-    justify-content: center;
-    margin: 0 auto;
-    width: 90%;
-    padding: 7.5rem 2rem 2rem;
-    color: white;
-  }
-
-  #blogContent > h1 {
-    text-align: center;
-    padding-bottom: 1rem;
-  }
-
-  #blogContent > h6 {
-    padding: 0.5rem 3rem;
-  }
-
-  #blogContent > p {
-    padding: 2rem 4rem;
-    font-size: large;
-  }
 }
 
 #blogContent {
@@ -92,4 +100,66 @@
 #blogContent > p {
   padding: 1rem 0.5rem;
   font-size: medium;
+}
+
+@media (min-width: 576px) {
+  #blogPostContainer {
+    background: rgb(222,10,10);
+    background: linear-gradient(175deg, rgba(222,10,10,1) 0%, rgba(26,9,79,1) 43%, rgba(131,209,156,1) 100%);
+    min-height: 100vh;
+    height: auto;
+  }
+
+  #blogContent {
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+    padding: 7.5rem 2rem 2rem;
+    color: white;
+  }
+
+  #blogContent > h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  #blogContent > h6 {
+    padding: 0.5rem 3rem;
+  }
+
+  #blogContent > p {
+    padding: 2rem 4rem;
+    font-size: large;
+  }
+}
+
+@media (min-width: 1200px) {
+  #blogPostContainer {
+    background: rgb(222,10,10);
+    background: linear-gradient(175deg, rgba(222,10,10,1) 0%, rgba(26,9,79,1) 43%, rgba(131,209,156,1) 100%);
+    min-height: 100vh;
+    height: auto;
+  }
+
+  #blogContent {
+    justify-content: center;
+    margin: 0 auto;
+    width: 55%;
+    padding: 7.5rem 6rem 2rem;
+    color: white;
+  }
+
+  #blogContent > h1 {
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  #blogContent > h6 {
+    padding: 0.5rem 3rem;
+  }
+
+  #blogContent > p {
+    padding: 2rem 4rem;
+    font-size: large;
+  }
 }

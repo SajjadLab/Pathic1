@@ -44,12 +44,12 @@ function BlogPost() {
         <h1>{blogData.title}</h1>
         <h6>Author: {blogData.author}</h6>
         <h6>Date: {blogData.publicationDate}</h6>
-        <p>{blogData.content}</p>
+        <div className='content' dangerouslySetInnerHTML={{__html: blogData.content}}></div>
       </div>
     </div>
   ):
   (
-    <div>
+    <div id="blogContent">
       <h1>This post is still in progress</h1>
     </div>
   )

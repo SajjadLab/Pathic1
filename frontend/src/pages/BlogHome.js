@@ -14,7 +14,6 @@ function BlogHome() {
   useEffect(() => {
     const handleScroll = e => {
       setScrollPosition(window.scrollY);
-      console.log(scrollPosition);
     }
 
     window.addEventListener('scroll', handleScroll);
@@ -50,6 +49,7 @@ function BlogHome() {
       {/*add navbar and pass scrollPosition */}
       <PathicNavbar scrollPosition={scrollPosition}/>
 
+      <h1>Pathic Blog</h1>
       <div id="blogList">
         {content}
       </div>
