@@ -10,7 +10,7 @@ import blogRouter from "./routes/blogRecords.js";
 
 // Initialization
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5050;
 
 // Use Decleration
 app.use(cors());

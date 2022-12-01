@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const uri = "mongodb+srv://sajjad:Fisherman_545217@pathic1.nnk5x.mongodb.net/?retryWrites=true&w=majority";
+const uri = process.env.DB;
 var _db;
 const dbo = {
   connectToServer: async function(callback) {

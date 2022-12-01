@@ -25,22 +25,27 @@ function BlogHome() {
 
   useEffect(() => {
     if(blogPosts == null) {
-    fetch("http://localhost:5050/Blog")
-      .then(results => results.json())
-      .then(data => {
-        setBlogPosts(data);
+      try {
+        fetch("http://localhost:5050/Blog")
+          .then(results => results.json())
+          .then(data => {
+            setBlogPosts(data);
 
-        const contentProcessing = data.map((post) =>
-            <Card className={post._id}>
-              <Card.Body>
-                <Card.Title>{post.title}</Card.Title>
-                <Card.Text>{post.summary}</Card.Text>
-                <Button as={Link} to={"/blog/" + post._id}variant="primary">See more</Button>
-              </Card.Body>
-            </Card>
-            )
-        setContent(contentProcessing)
-      })
+            const contentProcessing = data.map((post) =>
+                <Card className={post._id}>
+                  <Card.Body>
+                    <Card.Title>{post.title}</Card.Title>
+                    <Card.Text>{post.summary}</Card.Text>
+                    <Button as={Link} to={"/blog/" + post._id}variant="primary">See more</Button>
+                  </Card.Body>
+                </Card>
+                )
+            setContent(contentProcessing)
+          })
+      }
+      catch (error) {
+        console.log(error);
+      }
     }
   })
 
