@@ -26,7 +26,7 @@ function BlogHome() {
   useEffect(() => {
     if(blogPosts == null) {
       try {
-        fetch("http://localhost:5050/Blog")
+        fetch("http://165.232.156.241/Blog")
           .then(results => results.json())
           .then(data => {
             setBlogPosts(data);
