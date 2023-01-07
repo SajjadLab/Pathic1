@@ -84,7 +84,7 @@ class Map extends Component {
                   const entity = entities[i];
                   const center = BoundingSphere.fromPoints(entity.polygon.hierarchy.getValue().positions).center;
 
-                  entity.polygon.distanceDisplayCondition = new DistanceDisplayCondition(0,5e5);
+                  entity.polygon.distanceDisplayCondition = new DistanceDisplayCondition(0,5e6);
                   entity.polygon.material = Color.fromRandom({alpha:0.6});
                   entity.polygon.fill = true;
                   entity.polygon.outline = false;
@@ -92,7 +92,8 @@ class Map extends Component {
                   entity.polygon.outlineWidth = 2;
 
                   entity.position = center;
-                  entity.label = {text:entity.name, scaleByDistance:new NearFarScalar(1e5, 0.6, 5e5, 0)};
+                  entity.label = {text:entity.name, scaleByDistance:new NearFarScalar(1e5, 0.6, 5e6, 0)};
+                  console.log(entity);
                 }
               }}
               onClick={(moment, entity) => { this.viewerComponent.zoomTo(entity); }}
