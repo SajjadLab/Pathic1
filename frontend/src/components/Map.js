@@ -49,7 +49,6 @@ class Map extends Component {
   render () {
     return (
       <div>
-        <PathicNavbar />
         <div id="cesiumContainer">
           <Viewer
             ref={ref => { this.viewerComponent = ref; }}

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 
 // Bootstrap imports
-import Carousel from "react-bootstrap/Carousel";
+// import Carousel from "react-bootstrap/Carousel";
 import Container from "react-bootstrap/esm/Container.js";
 import Row from "react-bootstrap/esm/Row.js";
 import Col from "react-bootstrap/esm/Col.js";
-import Card from "react-bootstrap/esm/Card.js";
+// import Card from "react-bootstrap/esm/Card.js";
 import PathicNavbar from "../components/Navbar.js";
 
 // Image imports

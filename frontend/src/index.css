@@ -78,14 +78,6 @@ code {
   margin: 0;
   padding: 0;
 }
-
-#cesiumContainer {
-  width: 85%;
-  height: 80%;
-  padding: 5rem 0;
-  position: relative;
-  overflow: hidden;
-}
 @charset "UTF-8";
 /*!
 * Start Bootstrap - Grayscale v7.0.5 (https://startbootstrap.com/theme/grayscale)

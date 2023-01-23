@@ -1,3 +1,4 @@
+/*BLOG*/
 #blogHomeContainer {
   background: rgb(24,1,1);
   background: linear-gradient(175deg, rgba(24,1,1,1) 0%, rgba(26,9,79,1) 43%, rgba(131,209,156,1) 100%);
@@ -162,4 +163,28 @@
     padding: 2rem 4rem;
     font-size: large;
   }
+}
+
+/*PATHIC*/
+
+#cesiumContainer {
+  position: relative;
+  overflow: hidden;
+  height: max-content;
+}
+
+
+#searchBox {
+  position: fixed;
+  top: 50px;
+  right: 40%;
+  z-index: 99;
+  overflow: hidden;
+  font-size: large;
+  height: 80px; 
+  width: 500px;
+}
+
+.hidden {
+  display: none;
 }
