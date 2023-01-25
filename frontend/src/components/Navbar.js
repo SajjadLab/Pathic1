@@ -9,7 +9,7 @@ class PathicNavbar extends Component {
 
   render () {
    return (
-    <Navbar className={(this.props.scrollPosition === 0) ? "":"navbar-shrink"} fixed="top" expand="lg" id="mainNav">
+    <Navbar className={(this.props.scrollPosition === 0) ? "navbar-shrink":"navbar-shrink"} fixed="top" expand="lg" id="mainNav">
       <Container className="px-4 px-lg-5">
         <Navbar.Brand as={Link} to="/">Home</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

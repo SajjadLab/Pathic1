@@ -20,11 +20,6 @@
 @media (min-width: 992px) {
 }
 
-.pathic-about-section {
-  padding: 12rem 0;
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
-  min-height: 100vh;
-}
 
 /*
 
@@ -11608,7 +11603,7 @@ body {
     color: #fff;
   }
   #mainNav.navbar-shrink {
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.55);
   }
   #mainNav.navbar-shrink .navbar-brand {
     color: #000;
@@ -11700,7 +11695,7 @@ body {
 }
 
 .projects-section {
-  padding: 10rem 0;
+  padding: 5rem;
 }
 .projects-section .featured-text {
   padding: 2rem;
@@ -11745,9 +11740,6 @@ body {
   border: 0;
 }
 
-.contact-section {
-  padding-top: 5rem;
-}
 .contact-section .card {
   border: 0;
   border-bottom: 0.25rem solid #64a19d;

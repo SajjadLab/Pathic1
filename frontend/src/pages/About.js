@@ -51,7 +51,18 @@ function About() {
                     <div className="col-lg-8 mt-5">
                         <h2 className="text-white mb-4">What I Do</h2>
                         <p className="text-white-50">
-                          I am an Electrical Engineering undergraduate at UBC finishing up my last semester. I have always been facinated by computers, but my exposure to hardware and software design during my undergrad has changed the way I view computers. Since being introduced to programming through C during a 2nd year course I went on to learn about data structures and algorithms using C. Various courses and group projects implored me to dive deeper and use Assembly with custom wired microcontrollers. This journey caused me to stumble on microcontroller design and component level design using verilog hardware description language. The blend between software and hardware at this level is truley facinating and useful, the principles of design used on the hardware level can be used at all levels of the stack to improve functionality. All this inspired me to study higher level programming languages. I started with python and made a few, though unsuccessful, educational games like TetrisAI. I quickly found an interest in web-development though and decided to learn Django, HTML, and CSS. I made a practice website called PriorityCalculator which was meant to help me juggle my interests with my classes and assignments; suffice to say, I'm always itching to be coding rather than studying for a class. I then learned Javascript so that I could use D3.js in a new website idea I had with a friend called CourseOracle. It was meant to be a visually interactive website for UBC students to manage courses, requirements, and registration availability. We managed to get a skeleton of the project up before classes started and we were whisked away. Accompanying this Linux fueled rabbit hole dive was an equally fierce curiosity with human history. Accompanying this Linux fueled rabbit hole dive was an equally fierce curiosity with human history. Accompanying this Linux fueled rabbit hole dive was an equally fierce curiosity with human history.
+                        Hello, my name is Sajjad and I'm an Electrical Engineering graduate from UBC.
+                        I have spent years cultivating a broad range of skills over a number of fields.
+                        My experience working on Propbot as Power Systems lead facilitated application 
+                        of core electrical engineering theory such as circuit design, modelling, and testing, power 
+                        conversion, power storage, and efficiency. Working collaboratively with my capstone
+                        teammates we were able to get Propbot up and running with full remote control. I also
+                        have experience with system level design and coding as I bolstered electrical courses with
+                        computer hardware courses during my degree at UBC. Outside of academic settings I have
+                        diversified my knowledge with programming skills in Python and Wolfram as well as 
+                        web development skills using React and MongoDB. My work experience in customer services
+                        has allowed me to merge my strong communication skills with my diverse skillset into a 
+                        versatile package that I can leverage in any setting.
                         </p>
                     </div>
                 </div>
@@ -72,7 +83,7 @@ function About() {
           </Carousel>
         </section>
 
-      <section class="contact-section bg-black">
+      <section class="contact-section bg-black pt-4 pb-4">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -91,7 +102,7 @@ function About() {
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Email</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="alkazzazsajjad@gmail.com">alkazzazsajjad@gmail.com</a></div>
+                                <div class="small text-black-50"><a href="mailto:alkazzazsajjad@gmail.com">alkazzazsajjad@gmail.com</a></div>
                             </div>
                         </div>
                     </div>
@@ -101,7 +112,7 @@ function About() {
                                 <i class="fab fa-linkedin text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">LinkedIn</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="www.linkedin.com/in/sajjadalkazzaz">Chat with me</a></div>
+                                <div class="small text-black-50"><a href="https://www.linkedin.com/in/sajjadalkazzaz">Chat with me</a></div>
                             </div>
                         </div>
                     </div>

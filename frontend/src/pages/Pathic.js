@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import Map from "../components/Map.js";
+import PathicNavbar from "../components/Navbar.js";
 
 
 function Pathic () {
@@ -69,6 +70,8 @@ function Pathic () {
 
   return (
     <div className="Pathic">
+      <PathicNavbar />
+
       <input ref={searchRef} id="searchBox" className={searchBox ? undefined : 'hidden'} autoFocus type="search" placeholder="Search" onChange={handleSearchChange} value={searchInput} />
 
       <Map tgjs={tgjs} />

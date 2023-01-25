@@ -44,12 +44,12 @@ function Home() {
         <Container>
           <Row className="justify-content-md-center">
             <Col>
-              <h2 className="text-white mb-4">What is Pathic?</h2>
-              <p className="text-white-50">
+              <h2 className="mb-4">What is Pathic?</h2>
+              <p className="pathic-about-paragraph">
                 Some people believe that the invention of writing marked the beginning of civilization.
                 It's easy to see why, so much of human life is defined by our communication technologies.
-                Humans have come a far way in how we communicate, with the ever expanding ability of modern
-                technology. However, the way we study and view human history hasn't changed much to make
+                The fundamental means of day to day communication have changed for billions of people in recent decades.
+                However, the way we study and view human history hasn't changed much to make
                 use of that ability. Pathic is an interactive tool for understanding human history. The goal 
                 is to leverage the power of big data to make computational historical knowledge. Pathic uses unique
                 data structures to model the dynamic nature of human history and a robust MERN framework for an enjoyable
@@ -141,7 +141,7 @@ function Home() {
             </div>
         </section>
 
-      <section class="contact-section bg-black">
+      <section class="contact-section bg-black pt-4 pb-4">
             <div class="container px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5">
                     <div class="col-md-4 mb-3 mb-md-0">
@@ -160,7 +160,7 @@ function Home() {
                                 <i class="fas fa-envelope text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">Email</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="alkazzazsajjad@gmail.com">alkazzazsajjad@gmail.com</a></div>
+                                <div class="small text-black-50"><a href="mailto:alkazzazsajjad@gmail.com">alkazzazsajjad@gmail.com</a></div>
                             </div>
                         </div>
                     </div>
@@ -170,7 +170,7 @@ function Home() {
                                 <i class="fab fa-linkedin text-primary mb-2"></i>
                                 <h4 class="text-uppercase m-0">LinkedIn</h4>
                                 <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="www.linkedin.com/in/sajjadalkazzaz">Chat with me</a></div>
+                                <div class="small text-black-50"><a href="https://www.linkedin.com/in/sajjadalkazzaz">Chat with me</a></div>
                             </div>
                         </div>
                     </div>
