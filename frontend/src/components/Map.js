@@ -1,6 +1,6 @@
 // Cesium imports
-import { Viewer, GeoJsonDataSource, ScreenSpaceEvent, ScreenSpaceEventHandler, Scene } from "resium";
-import { Ion, IonResource, Entity, Color, NearFarScalar, DistanceDisplayCondition, ScreenSpaceEventType, BoundingSphere, ArcGISTiledElevationTerrainProvider, createWorldTerrain, ShadowMode } from "cesium";
+import { Viewer, GeoJsonDataSource, ScreenSpaceEventHandler, Scene } from "resium";
+import { Ion, IonResource, Entity, Color, NearFarScalar, DistanceDisplayCondition, BoundingSphere, createWorldTerrain, ShadowMode } from "cesium";
 // React imports
 import { Component } from "react";
 // Bootstrap imports
@@ -8,43 +8,37 @@ import { Component } from "react";
 //import Row from "react-bootstrap/Row";
 //import Col from "react-bootstrap/Col";
 
-import PathicNavbar from "./Navbar.js"
-
 Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiJhOGJjN2E4MC0wZmFmLTRlMjEtYWMwZi1lZjRjMWU2NGRkNDciLCJpZCI6MTA0NTUyLCJpYXQiOjE2NjAyOTUxMDF9.4NgroU9rZOF3EWRyWlc4UYXZ-8g-TGTjbCyiWMf5FIg";
 
 class Map extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {currentHighlight: null};
-  }
-
+  /*
   mouseEvent = e => {
     const picked = this.viewerComponent.cesiumElement.scene.pick(e.endPosition);
     const id = picked ? picked.id || picked.primitive.id : null;
 
     if (picked && id instanceof Entity) {
-      this.setState({currentHighlight: id});
+      this.props.setData(id);
       id.polygon.outlineColor = Color.YELLOW;
       id.polygon.outlineWidth = 10;
+      console.log(this.props)
 
-      if (this.state.currentHighlight && this.state.currentHighlight !== id) {
-        const tempId = this.state.currentHighlight;
+      if (this.props.data && this.props.data !== id) {
+        const tempId = this.props.data;
         tempId.polygon.outlineColor = Color.WHITE;;
         tempId.polygon.outlineWidth = 2;
-        this.setState({currentHighlight: null});
+        this.props.setData(null);
       }
     }
     else {
-      if (this.state.currentHighlight) {
-        const tempId = this.state.currentHighlight;
+      if (this.props.data) {
+        const tempId = this.props.data;
         tempId.polygon.outlineColor = Color.WHITE;;
         tempId.polygon.outlineWidth = 2;
-        this.setState({currentHighlight: null});
+        this.props.setData(null);
       };
     };
   };
-
+ */
 
   render () {
     return (
@@ -60,7 +54,18 @@ class Map extends Component {
             vrButton={true}
             terrainProvider={createWorldTerrain({url: IonResource.fromAssetId(1)})}
             terrainShadows={ShadowMode.CAST_ONLY}
+            infoBox={false}
             //terrainProvider={ new ArcGISTiledElevationTerrainProvider({               url: 'https://landscape6.arcgis.com/arcgis/rest/services/World_Elevation_GMTED/ImageServer/?{AAPK0371b77ce99b4c0d9659b726b31ef861nCekfAet7q4WUOGCvOtSYdVechD-a5JaSp8PNRj7dQ17m1X1FhDfdl8v-nV7VKoA}' }) }
+            // Get entity
+            onClick={(e, target) => {
+              if (target?.id instanceof Entity) {
+                //console.log(target.id.properties.entities._value);
+                this.props.setData(target.id.properties.entities._value);
+              }
+              else {
+                this.props.setData([]);
+              }
+            }}
           >
             {/* Modify scene*/}
             <Scene
@@ -82,8 +87,9 @@ class Map extends Component {
                 for (let i=0; i<entities.length; i++) {
                   const entity = entities[i];
                   const center = BoundingSphere.fromPoints(entity.polygon.hierarchy.getValue().positions).center;
+                  entity.name = entity.properties.title._value;
 
-                  entity.polygon.distanceDisplayCondition = new DistanceDisplayCondition(0,5e6);
+                  entity.polygon.distanceDisplayCondition = new DistanceDisplayCondition(0,5e8);
                   entity.polygon.material = Color.fromRandom({alpha:0.6});
                   entity.polygon.fill = true;
                   entity.polygon.outline = false;
@@ -91,16 +97,16 @@ class Map extends Component {
                   entity.polygon.outlineWidth = 2;
 
                   entity.position = center;
-                  entity.label = {text:entity.name, scaleByDistance:new NearFarScalar(1e5, 0.6, 5e6, 0)};
-                  console.log(entity);
+                  entity.label = {text:entity.name, scaleByDistance:new NearFarScalar(1e6, 0.6, 5e8, 0)};
+                  //console.log(entity);
                 }
               }}
-              onClick={(moment, entity) => { this.viewerComponent.zoomTo(entity); }}
             />
 
             {/*Edit scene to highlight hovered entities*/}
             <ScreenSpaceEventHandler useDefault>
-        {/*<ScreenSpaceEvent action={this.mouseEvent} type={ScreenSpaceEventType.MOUSE_MOVE} />*/}
+        {/*<ScreenSpaceEvent action={this.mouseEvent} type={ScreenSpaceEventType.MOUSE_MOVE} />onClick={(moment, entity) => { this.viewerComponent.zoomTo(entity); }*/}
+              }
             </ScreenSpaceEventHandler>
               
           </Viewer>

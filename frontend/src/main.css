@@ -1,6 +1,133 @@
+body {
+  font-family: "Aboreto";
+}
+
+/*HOME*/
+.homeContainer {
+  overflow-x: hidden;
+}
+
+#pathicHeader {
+  height: 100vh;
+  padding: 16rem 3rem 8rem 3rem;
+}
+
+#pathicLogoRow {
+  justify-content: center;
+}
+
+#pathicTitleRow {
+  justify-content: center;
+}
+
+#headerCol2 {
+  padding-right: 4rem;
+}
+
+#pathicHeader #pathicLogo {
+  width: 200px;
+  height: 100px;
+}
+
+#pathicHeader h1 {
+  font-size: 100px;
+  max-width: 560px;
+  text-align: center;
+}
+
+#pathicHeader h2 {
+  font-size: 40px;
+  max-width: 280px;
+  padding: 0 1rem;
+}
+
+#throughTimeRow  {
+  justify-content: right;
+}
+
+#homeContent {
+  padding: 5rem 3rem;
+}
+
+.revealContent {
+  transition: opacity 1.5s;
+  opacity: 1 !important;
+}
+
+#collectContent {
+  min-height: 70vh;
+  padding: 5rem 0;
+  opacity: 0;
+}
+
+#collectContent p {
+  max-width: 550px;
+  padding-left: 1.5rem;
+}
+
+#collectContentCol {
+  padding: 2rem 0;
+}
+
+#collectButtonRow {
+  padding-left: 3rem;
+}
+
+#homeToBlogButton {
+  max-width: 250px;
+  background-color: black;
+}
+
+#interactContent {
+  min-height: 70vh;
+  padding: 5rem 0;
+  opacity: 0;
+}
+
+#interactContent .col {
+  justify-content: right;
+}
+
+#interactContentCol {
+  padding: 2rem 0;
+}
+
+#interactContent p {
+  padding-right: 4rem;
+  text-align: right;
+}
+
+#interactButtonRow {
+  padding-right: 6rem;
+  justify-content: right;
+}
+
+#connectContent {
+  min-height: 70vh;
+  padding: 5rem 0;
+  opacity: 0;
+}
+
+#connectContent p {
+  max-width: 550px;
+  padding-left: 1.5rem;
+}
+
+#connectContentCol {
+  padding: 2rem 0;
+}
+
+#connectButtonRow {
+  padding-left: 3rem;
+}
+
 /*NAVBAR*/
 .navbar-topper {
   color: black;
+}
+
+#pathicNavbar {
+  height: 100px;
 }
 
 /*HOME*/
@@ -30,20 +157,24 @@
 /*BLOG*/
 #blogHomeContainer {
   background: white;
-  min-height: 100vh;
+  min-height: 120vh;
   height: auto;
+  overflow-x: hidden;
 }
 
-#blogHomeContainer > h1 {
-  padding-top: 8rem;
+#blogHomeRow {
+  padding: 12rem 3rem 8rem 3rem;
+}
+
+#blogHomeContainer h1 {
+  padding-top: 2rem;
   text-align: center;
-  color: black;
+  font-size: 60px;
 }
 
 #blogList {
   justify-content: center;
   margin: 0 auto;
-  padding-top: 2rem;
   text-align: center;
   width: 80%;
 }
@@ -86,7 +217,7 @@
     margin: 0 auto;
     padding-top: 4rem;
     text-align: center;
-    width: 40%;
+    width: 75%;
   }
 
   #blogList > .card {
@@ -206,3 +337,27 @@
 .hidden {
   display: none;
 }
+
+#dataBox {
+  position: fixed;
+  top: 120px;
+  right: 5%;
+  z-index: 99;
+  font-size: large;
+  height: 650px;
+  width: 500px;
+  background-color: white;
+  opacity: 40%;
+}
+
+
+#dataBox .row {
+  padding: 0.15rem 0;
+}
+
+#dataBoxCol {
+  padding: 1rem 1rem;
+  opacity: 1 !important;
+}
+
+/*FOOTER*/

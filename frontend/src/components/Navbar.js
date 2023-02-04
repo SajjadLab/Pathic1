@@ -24,7 +24,7 @@ class PathicNavbar extends Component {
             </Nav.Item>
             <Nav.Link as={Link} to={"/pathic"}>Pathic</Nav.Link>
             <Nav.Link as={Link} to={"/blog"}>Blog</Nav.Link>
-            <Nav.Link as={Link} to={"/about"}>About the Creator</Nav.Link>
+            <Nav.Link as={Link} to={"/about"}>About</Nav.Link>
 
           </Nav>
         </Navbar.Collapse>

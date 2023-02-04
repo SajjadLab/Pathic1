@@ -2,9 +2,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Row from "react-bootstrap/esm/Row.js";
+import Col from "react-bootstrap/esm/Col.js";
 
 // Components
 import PathicNavbar from "../components/Navbar.js";
+import Footer from "../components/Footer.js";
 
 function BlogHome() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -54,47 +57,16 @@ function BlogHome() {
       {/*add navbar and pass scrollPosition */}
       <PathicNavbar scrollPosition={scrollPosition}/>
 
-      <h1>Pathic Blog</h1>
-      <div id="blogList">
-        {content}
-      </div>
-
-      <section class="contact-section bg-black pt-4 pb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fab fa-github text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Github</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="https://github.com/SajjadLab">SajjadLab</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="mailto:alkazzazsajjad@gmail.com">alkazzazsajjad@gmail.com</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fab fa-linkedin text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">LinkedIn</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="https://www.linkedin.com/in/sajjadalkazzaz">Chat with me</a></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+      <Row id="blogHomeRow">
+        <Col><h1>Pathic Blog</h1></Col>
+        <Col>
+          <div id="blogList">
+            {content}
+          </div>
+        </Col>
+      </Row>
+      
+      <Footer />
     </div>
   )
 }
