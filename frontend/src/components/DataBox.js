@@ -12,7 +12,7 @@ function DataBox(props) {
         if(props.data[0] !== undefined) {
             if (elementDisplay == null) {
 
-                fetch("http://localhost:5050/Tempath/" + props.data[0])
+                fetch("http://165.232.156.241/Tempath/" + props.data[0])
                     .then(results => results.json())
                     .then(data => {
                         setElementDisplay(data);
@@ -29,7 +29,7 @@ function DataBox(props) {
         <div id="dataBox">
             <Col id="dataBoxCol">
                 <Row><h1>{elementDisplay.title[0]}</h1></Row>
-                <Row>
+                <Row id="dataBoxRow2">
                     <Col><h6>{elementDisplay.startDate.startDate}</h6></Col>
                     <Col><h6>{elementDisplay.endDate.endDate}</h6></Col>
                 </Row>
@@ -37,7 +37,7 @@ function DataBox(props) {
                     <h6>{elementDisplay.referenceGroup.heirarchy}</h6>
                     <h6>{elementDisplay.referenceGroup.value}</h6>
                 </Row>
-                <Row>
+                <Row id="dataBoxRow4">
                     <h5>Interpretation: {elementDisplay.interpretation}</h5>
                 </Row>
                 <Row>

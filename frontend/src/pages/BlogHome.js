@@ -58,7 +58,10 @@ function BlogHome() {
       <PathicNavbar scrollPosition={scrollPosition}/>
 
       <Row id="blogHomeRow">
-        <Col><h1>Pathic Blog</h1></Col>
+        <Col>
+          <Row><h1>Pathic Blog</h1></Row>
+          <Row><h2>A Collection of Thoughts</h2></Row>
+        </Col>
         <Col>
           <div id="blogList">
             {content}

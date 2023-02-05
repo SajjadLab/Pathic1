@@ -1,6 +1,8 @@
-import { Component } from "react";
 import React, { useState, useEffect } from "react";
 import PathicNavbar from "../components/Navbar.js";
+import Footer from "../components/Footer.js";
+import Row from "react-bootstrap/esm/Row.js";
+import Col from "react-bootstrap/esm/Col.js";
 
 // Bootstrap
 import Carousel from "react-bootstrap/Carousel";
@@ -8,15 +10,32 @@ import Carousel from "react-bootstrap/Carousel";
 // Images
 import headshot from "../assets/img/headshot.jpg";
 import ubcsigil from "../assets/img/UBCsigil.png";
-import sabis from "../assets/img/sabis.png";
+import sajjadPropbot from "../assets/img/sajjadPropbot.png";
+import propbotLayout from "../assets/img/propbotLayout.png";
+import propbotTeam from "../assets/img/propbotTeam.png";
+import pathicConnection from "../assets/img/pathicConnection.gif";
+import keyboard from "../assets/img/keyboard.jpg";
 
 function About() {
   const [scrollPosition, setScrollPosition] = useState(0);
+  const [displayEducation, setDisplayEducation] = useState(false);
+  const [displayPropbot, setDisplayPropbot] = useState(false);
+  const [displayPathic, setDisplayPathic] = useState(false);
 
   useEffect(() => {
     const handleScroll = e => {
       setScrollPosition(window.scrollY);
       console.log(scrollPosition);
+
+      if(window.scrollY >= 400) {
+        setDisplayEducation(true);
+      }
+      if(window.scrollY >= 1600) {
+        setDisplayPropbot(true);
+      }
+      if(window.scrollY >= 5100) {
+        setDisplayPathic(true);
+      }
     }
 
     window.addEventListener('scroll', handleScroll);
@@ -27,98 +46,129 @@ function About() {
   })
 
   return (
-      <div className="aboutContainer">
-      <PathicNavbar scrollPosition={scrollPosition}/>
-        {/*Masthead*/}
-        <header className="masthead">
-            <div className="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-                <div className="d-flex justify-content-center">
-                    <div className="text-center">
-                        <h1 className="mx-auto my-0 text-uppercase">Hi, I'm Sajjad</h1>
-                        <h2 className="text-white-50 mx-auto mt-2 mb-5">I am an Electrical Engineering student at UBC with an interest in programming, web-design, computational knowledge, and history</h2>
-                        <a className="btn btn-primary" id="headshot-button" href="#about">
-                          <img id="headshot-button-img" src={headshot} alt="headshot" />
-                        </a>
-                    </div>
+      <div id="aboutContainer">
+        <PathicNavbar scrollPosition={scrollPosition}/>
+
+        <Row id="aboutHeader">
+          <h1>Hi, I'm Sajjad</h1>
+          <a className="btn btn-primary" id="headshot-button" href="#about">
+            <img id="headshot-button-img" src={headshot} alt="headshot" />
+          </a>
+        </Row>
+
+        <Row id="educationRow" {...(displayEducation?{class: "row revealContent"}:{})}>
+          <Col id="educationCol"><h2>Electrical Engineering Graduate from</h2></Col>
+          <Col><img src={ubcsigil} alt="ubc" /></Col>
+          <Row id="coursesRow">
+            <Carousel variant="dark">
+              <Carousel.Item>
+                <div id="powerElectronics">
+                  <h3>Power Electronics</h3>
+                  <p>I studied rectifiers and tested their harmonic histortion in a lab. I also covered buck, boost, and buck-boost converter technologies. Various inverter topologies were theoretically covered in class and further evaluated in labs.</p>
                 </div>
-            </div>
-        </header>
-
-        {/*About section*/}
-        <section className="about-section text-center">
-            <div className="container px-4 px-lg-5" id="about">
-                <div className="row gx-4 gx-lg-5 justify-content-center">
-                    <div className="col-lg-8 mt-5">
-                        <h2 className="text-white mb-4">What I Do</h2>
-                        <p className="text-white-50">
-                        Hello, my name is Sajjad and I'm an Electrical Engineering graduate from UBC.
-                        I have spent years cultivating a broad range of skills over a number of fields.
-                        My experience working on Propbot as Power Systems lead facilitated application 
-                        of core electrical engineering theory such as circuit design, modelling, and testing, power 
-                        conversion, power storage, and efficiency. Working collaboratively with my capstone
-                        teammates we were able to get Propbot up and running with full remote control. I also
-                        have experience with system level design and coding as I bolstered electrical courses with
-                        computer hardware courses during my degree at UBC. Outside of academic settings I have
-                        diversified my knowledge with programming skills in Python and Wolfram as well as 
-                        web development skills using React and MongoDB. My work experience in customer services
-                        has allowed me to merge my strong communication skills with my diverse skillset into a 
-                        versatile package that I can leverage in any setting.
-                        </p>
-                    </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div id="vlsi">
+                  <h3>Very Large Scale Integration</h3>
+                  <p>Furthered my experience using System Verilog and Quartus to make a state machine for a room automation device. Studied the hardware level design and the modern principles of finfet devices using Cadence. Layed out then analyzed and plotted the behaviour of a NAND3 gate using Cadence which received first place in a class of 60; the metric was delay x area.</p>
                 </div>
-            </div>
-
-          <Carousel>
-            <Carousel.Item>
-              <div id="carouselEducation">
-                <img className="img-fluid" id="carouselImage" src={ubcsigil} alt="ubc" />
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div id="carouselEducation">
-                <img className="img-fluid" id="carouselImage" src={sabis} alt="sabis erbil" />
-              </div>
-            </Carousel.Item>
-
-          </Carousel>
-        </section>
-
-      <section class="contact-section bg-black pt-4 pb-4">
-            <div class="container px-4 px-lg-5">
-                <div class="row gx-4 gx-lg-5">
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fab fa-github text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Github</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="https://github.com/SajjadLab">SajjadLab</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fas fa-envelope text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">Email</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="mailto:alkazzazsajjad@gmail.com">alkazzazsajjad@gmail.com</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3 mb-md-0">
-                        <div class="card py-4 h-100">
-                            <div class="card-body text-center">
-                                <i class="fab fa-linkedin text-primary mb-2"></i>
-                                <h4 class="text-uppercase m-0">LinkedIn</h4>
-                                <hr class="my-4 mx-auto" />
-                                <div class="small text-black-50"><a href="https://www.linkedin.com/in/sajjadalkazzaz">Chat with me</a></div>
-                            </div>
-                        </div>
-                    </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div id="internationalRelations">
+                  <h3>Introduction to IR</h3>
+                  <p>Applied knowledge I had accumulated during personal reading in a formal academic environment. Sharpened my essay writing abilities while writing on topics that straddle the line between politics and engineering with regard to climate change.</p>
                 </div>
-            </div>
-        </section>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div id="conversionTransmission">
+                  <h3>Energy Conversion and Transmission</h3>
+                  <p>Studied 3-phase power in depth in a theoretical setting. Evaluated DC machines and brushless DC motors in a lab. Analyzed the generation, transformation, and transmission power in a grid network.</p>
+                </div>
+              </Carousel.Item>
+            </Carousel>
+          </Row>
+        </Row>
+
+        <Row id="propbotRow" {...(displayPropbot?{class: "row revealContent"}:{})}>
+          <Row><h2>Propbot</h2></Row>
+          <Row><p>Propbot is a Capstone Project I worked on for the UBC Radio Science Lab along with my colleagues. Propbot is a semi-autonomous robot capable of carrying measurement equipment around to data collection points of interest.</p></Row>
+          <Row id="propbotVideoRow"><iframe width="1066" height="600" src="https://www.youtube.com/embed/8sedLmPvChM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></Row>
+          <Row id="postPropbotFrameRow">
+            <Row>
+              <Col><h4>I led the Power Team</h4></Col>
+              <Col><img width={650} src={sajjadPropbot} alt="Sajjad with Propbot" /></Col>
+            </Row>
+            <Row>
+              <Col><h4>Re-designed the legacy power system and control writing. Added a new modular power storage component.</h4></Col>
+              <Col><img src={propbotLayout} alt="Propbot schematic" /></Col>
+            </Row>
+            <Row>
+              <Col><img src={propbotTeam} alt="Propbot Team" /></Col>
+              <Col><h4>Collaborated with team-members to achieve ambitious goals with outstanding results!</h4></Col>
+            </Row>
+          </Row>
+        </Row>
+
+        <Row id="pathicRow" {...(displayPathic?{class: "row revealContent"}:{})}>
+          <Row><h2>Developing Pathic</h2></Row>
+          <Row><p>Pathic is a long term personal research project I have been working on. I am interested in modelling the historical world and creating an interactive and intuitive environment for those models.</p></Row>
+          <Row><img width={650} src={pathicConnection} alt="connection" /></Row>
+          <Row><h2>Pathic Keyboard</h2></Row>
+          <Row><p>I researched, purchased, soldered, and built a customer wireless split keyboard for advanced human-computer interfacing. <a href="/blog/6387c89fcfe4d7470cfda911">Learn more here</a></p></Row>
+          <Row><img width={650} src={keyboard} alt="keyboard" /></Row>
+          <Row><h2>Some Things I've Learned on the Way</h2></Row>
+          <Row>
+            <Col><h3>Software</h3></Col>
+            <Col>
+              <Row><h5>HTML and CSS</h5></Row>
+              <Row><h5>React</h5></Row>
+              <Row><h5>MongoDB</h5></Row>
+              <Row><h5>Python</h5></Row>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col><h3>Hardware</h3></Col>
+            <Col>
+              <Row><h5>SolidWorks</h5></Row>
+              <Row><h5>3D Printing</h5></Row>
+              <Row><h5>Soldering</h5></Row>
+              <Row><h5>PCB Layout</h5></Row>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col><h3>Design</h3></Col>
+            <Col>
+              <Row><h5>Complex Models</h5></Row>
+              <Row><h5>UX/UI</h5></Row>
+              <Row><h5>Photo Editing</h5></Row>
+              <Row><h5>Video Editing</h5></Row>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col><h3>History</h3></Col>
+            <Col>
+              <Row><h5>Ancient Rome</h5></Row>
+              <Row><h5>Medieval Europe</h5></Row>
+              <Row><h5>Medieval England</h5></Row>
+              <Row><h5>Renaissance and Reformation</h5></Row>
+            </Col>
+          </Row>
+
+          <Row id="booksRow">
+            <Col><h3>Books</h3></Col>
+            <Col>
+              <Row><Col><h5>Guns, Germs and Steel</h5></Col><Col><h5>- Jared Diamond</h5></Col></Row>
+              <Row><Col><h5>The Republic</h5></Col><Col><h5>- Plato</h5></Col></Row>
+              <Row><Col><h5>The Prince</h5></Col><Col><h5>- Niccolo Machiavelli</h5></Col></Row>
+              <Row><Col><h5>Gödel Escher Bach</h5></Col><Col><h5>- Douglas Hofstadter</h5></Col></Row>
+            </Col>
+          </Row>
+        </Row>
+      
+        <Footer />
       </div>
   );
 }

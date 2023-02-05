@@ -9,7 +9,7 @@ body {
 
 #pathicHeader {
   height: 100vh;
-  padding: 16rem 3rem 8rem 3rem;
+  padding: 8rem 1rem 4rem 1rem;
 }
 
 #pathicLogoRow {
@@ -21,7 +21,7 @@ body {
 }
 
 #headerCol2 {
-  padding-right: 4rem;
+  padding-right: 0.5rem;
 }
 
 #pathicHeader #pathicLogo {
@@ -56,17 +56,21 @@ body {
 
 #collectContent {
   min-height: 70vh;
-  padding: 5rem 0;
+  padding: 2rem 0;
   opacity: 0;
 }
 
 #collectContent p {
-  max-width: 550px;
+  max-width: 350px;
   padding-left: 1.5rem;
 }
 
+#collectContent img {
+  max-width: 320px;
+}
+
 #collectContentCol {
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 #collectButtonRow {
@@ -80,7 +84,7 @@ body {
 
 #interactContent {
   min-height: 70vh;
-  padding: 5rem 0;
+  padding: 1rem 0;
   opacity: 0;
 }
 
@@ -88,17 +92,25 @@ body {
   justify-content: right;
 }
 
+#interactContent img {
+  max-width: 320px;
+}
+
 #interactContentCol {
-  padding: 2rem 0;
+  padding: 1rem 0;
+}
+
+#interactContent h2 {
+  text-align: right;
 }
 
 #interactContent p {
-  padding-right: 4rem;
+  padding-right: 2rem;
   text-align: right;
 }
 
 #interactButtonRow {
-  padding-right: 6rem;
+  padding-right: 3rem;
   justify-content: right;
 }
 
@@ -113,12 +125,149 @@ body {
   padding-left: 1.5rem;
 }
 
+#connectContent img {
+  max-width: 300px;
+}
+
 #connectContentCol {
   padding: 2rem 0;
 }
 
 #connectButtonRow {
   padding-left: 3rem;
+}
+
+@media (min-width: 600px) {
+  .homeContainer {
+    overflow-x: hidden;
+  }
+
+  #pathicHeader {
+    height: 100vh;
+    padding: 16rem 3rem 8rem 3rem;
+  }
+
+  #pathicLogoRow {
+    justify-content: center;
+  }
+
+  #pathicTitleRow {
+    justify-content: center;
+  }
+
+  #headerCol2 {
+    padding-right: 4rem;
+  }
+
+  #pathicHeader #pathicLogo {
+    width: 200px;
+    height: 100px;
+  }
+
+  #pathicHeader h1 {
+    font-size: 100px;
+    max-width: 560px;
+    text-align: center;
+  }
+
+  #pathicHeader h2 {
+    font-size: 40px;
+    max-width: 280px;
+    padding: 0 1rem;
+  }
+
+  #throughTimeRow  {
+    justify-content: right;
+  }
+
+  #homeContent {
+    padding: 5rem 3rem;
+  }
+
+  .revealContent {
+    transition: opacity 1.5s;
+    opacity: 1 !important;
+  }
+
+  #collectContent {
+    min-height: 70vh;
+    padding: 5rem 0;
+    opacity: 0;
+  }
+
+  #collectContent p {
+    max-width: 550px;
+    padding-left: 1.5rem;
+  }
+
+  #collectContent img {
+    max-width: 800px;
+  }
+
+  #collectContentCol {
+    padding: 2rem 0;
+  }
+
+  #collectButtonRow {
+    padding-left: 3rem;
+  }
+
+  #homeToBlogButton {
+    max-width: 250px;
+    background-color: black;
+  }
+
+  #interactContent {
+    min-height: 70vh;
+    padding: 5rem 0;
+    opacity: 0;
+  }
+
+  #interactContent .col {
+    justify-content: right;
+  }
+
+  #interactContent img {
+    max-width: 800px;
+  }
+
+
+  #interactContentCol {
+    padding: 2rem 0;
+  }
+
+  #interactContent p {
+    padding-right: 5rem;
+    text-align: right;
+  }
+
+  #interactButtonRow {
+    padding-right: 6rem;
+    justify-content: right;
+  }
+
+  #connectContent {
+    min-height: 70vh;
+    padding: 5rem 0;
+    opacity: 0;
+  }
+
+  #connectContent p {
+    max-width: 550px;
+    padding-left: 1.5rem;
+  }
+
+  #connectContent img {
+    max-width: 800px;
+  }
+
+  #connectContentCol {
+    padding: 2rem 0;
+  }
+
+  #connectButtonRow {
+    padding-left: 3rem;
+  }
 }
 
 /*NAVBAR*/
@@ -128,30 +277,6 @@ body {
 
 #pathicNavbar {
   height: 100px;
-}
-
-/*HOME*/
-.home-container {
-  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.9) 75%, rgba(0, 0, 0, 0.8) 100%);
-}
-.pathic-about-section {
-  padding: 10rem 0;
-}
-
-.pathic-about-paragraph {
-  padding: 0rem 2rem;
-}
-
-@media (min-width: 576px) {
-  .pathic-about-paragraph {
-    padding: 0rem 6rem;
-  }
-}
-
-@media (min-width: 1200) {
-  .pathic-about-paragraph {
-    padding: 0rem 8rem;
-  }
 }
 
 /*BLOG*/
@@ -170,6 +295,11 @@ body {
   padding-top: 2rem;
   text-align: center;
   font-size: 60px;
+}
+
+#blogHomeContainer h2 {
+  padding-top: 4rem;
+  text-align: center;
 }
 
 #blogList {
@@ -347,7 +477,7 @@ body {
   height: 650px;
   width: 500px;
   background-color: white;
-  opacity: 40%;
+  opacity: 60%;
 }
 
 
@@ -360,4 +490,259 @@ body {
   opacity: 1 !important;
 }
 
+#dataBoxRow2 {
+  border-top: 1px solid black;
+}
+
+#dataBoxRow4 {
+  border-top: 1px solid black;
+}
+
 /*FOOTER*/
+
+/*ABOUT*/
+#aboutContainer {
+  overflow-y: hidden;
+}
+
+#aboutHeader {
+  min-height: 120vh;
+  padding: 6rem 1rem 3rem 1rem;
+  justify-content: center;
+}
+
+#aboutHeader h1 {
+  text-align: right;
+  padding-right: 3rem;
+}
+
+#headshot-button {
+  margin: 0;
+  width: 250px;
+  height: 250px;
+  padding: 0;
+  border-radius: 50%;
+}
+
+#headshot-button-img {
+  position: relative;
+  width: 250px;
+  height: auto;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+}
+
+#educationRow {
+  min-height: 120vh;
+  padding: 6rem 1rem 3rem 1rem;
+  opacity: 0;
+}
+
+#educationCol {
+  padding: 0.5rem 0;
+  height: 2rem;
+}
+
+#educationCol h2 {
+  max-width: 320px;
+  padding: 1rem 1rem;
+}
+
+#educationRow img {
+  max-width: 320px;
+}
+
+.carousel-item h3 {
+  padding-top: 3rem;
+  padding-left: 1rem;
+}
+
+.carousel-item p {
+  max-width: 60rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+#propbotRow {
+  min-height: 120vh;
+  padding: 3rem 1rem 3rem 1rem;
+  opacity: 0;
+}
+
+#propbotRow h2 {
+  padding-left: 2rem;
+  height: 3rem;
+}
+
+#propbotRow p {
+  height: 12rem;
+}
+
+#propbotRow img {
+  max-width: 400px;
+}
+
+#propbotVideoRow {
+  min-height: 60vh;
+  padding-left: 1rem;
+  padding-right: 0;
+}
+
+#postPropbotFrameRow {
+  min-height: 120vh;
+  padding: 4rem 1rem 0rem 1.25rem;
+}
+
+#postPropbotFrameRow h4 {
+  padding-top: 10rem;
+}
+
+#postPropbotFrameRow .row {
+  padding: 4rem 0;
+}
+
+#pathicRow {
+  min-height: 150vh;
+  padding: 3rem 1rem 3rem 1rem;
+  opacity: 0;
+}
+
+#pathicRow h2 {
+  padding-top: 1rem;
+  padding-left: 2rem;
+  height: 5rem;
+}
+
+#pathicRow img {
+  padding: 3rem 0rem 6rem 1rem;
+}
+
+#booksRow h5{
+  font-size: small;
+}
+
+#booksRow .col {
+  max-width: 50%;
+}
+
+@media (min-width: 600px) {
+  #aboutHeader {
+    min-height: 120vh;
+    padding: 12rem 3rem 6rem 3rem;
+    justify-content: center;
+  }
+
+  #aboutHeader h1 {
+    text-align: right;
+    padding-right: 8rem;
+  }
+
+  #headshot-button {
+    margin: 0;
+    width: 350px;
+    height: 350px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  #headshot-button-img {
+    position: relative;
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #educationRow {
+    min-height: 120vh;
+    padding: 12rem 3rem 6rem 3rem;
+    opacity: 0;
+  }
+
+  #educationRow img {
+    max-width: 800px;
+  }
+
+  #educationCol {
+    padding: 1.5rem 0;
+  }
+
+  #educationCol h2 {
+    max-width: 640px;
+    padding: 1rem 6rem;
+  }
+
+  .carousel-item h3 {
+    padding-top: 5rem;
+    padding-left: 16rem;
+  }
+
+  .carousel-item p {
+    max-width: 80rem;
+    padding-top: 1rem;
+    padding-left: 17rem;
+  }
+
+  #propbotRow {
+    min-height: 120vh;
+    padding: 6rem 3rem 6rem 3rem;
+    opacity: 0;
+  }
+
+  #propbotRow h2 {
+    padding-left: 4rem;
+    height: 5rem;
+  }
+
+  #propbotRow p {
+    height: 6rem;
+    max-width: 1350px;
+    padding-left: 10rem;
+  }
+
+  #propbotVideoRow {
+    min-height: 60vh;
+  }
+
+  #postPropbotFrameRow {
+    min-height: 120vh;
+    padding: 6rem 0rem 0rem 6rem;
+  }
+
+  #postPropbotFrameRow h4 {
+    padding-top: 10rem;
+  }
+
+  #postPropbotFrameRow .row {
+    padding: 4rem 0;
+  }
+
+  #postPropbotFrameRow img {
+    max-width: 1000px;
+  }
+
+  #pathicRow {
+    min-height: 150vh;
+    padding: 6rem 3rem 6rem 3rem;
+    opacity: 0;
+  }
+
+  #pathicRow h2 {
+    padding-top: 2rem;
+    padding-left: 4rem;
+    height: 5rem;
+  }
+
+  #pathicRow p {
+    height: 6rem;
+    max-width: 1350px;
+    padding-left: 10rem;
+  }
+
+
+  #pathicRow img {
+    padding: 3rem 0;
+  }
+}

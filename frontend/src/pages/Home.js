@@ -12,9 +12,9 @@ import Footer from "../components/Footer.js";
 // Image imports
 //import terrain from "../assets/img/cesiumTerrain.jpg";
 import interactive from "../assets/img/interactive.jpg";
-import empathy from "../assets/img/empathy.png";
-//import keyboard from "../assets/img/keyboard.jpg";
 import pathicLogo from "../assets/img/pathicLogo.png";
+import collect from "../assets/img/collect400.gif";
+import pathicConnection from "../assets/img/pathicConnection.gif";
 
 function Home() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -73,11 +73,11 @@ function Home() {
                     <Row id="collectButtonRow"><Button id="homeToBlogButton" as={Link} to={"/blog"} variant="secondary">Learn More</Button></Row>
 
                 </Col>
-                <Col></Col>
+                <Col><img src={collect} alt="Collect Data" /></Col>
             </Row>
 
             <Row id="interactContent" {...(displayInteract?{class: "row revealContent"}:{})}>
-                <Col><img src={interactive} alt="interactive" /></Col>
+                <Col><img width={550} src={interactive} alt="interactive" /></Col>
                 <Col id="interactContentCol">
                     <Row><h2>Interact in a 3D Environment</h2></Row>
                     <Row><p>The Pathic Map is powered by Cesium.js</p></Row>
@@ -91,7 +91,7 @@ function Home() {
                     <Row><p>Enjoy lively, data driven debates with the greatest thinkers, alive or otherwise</p></Row>
                     <Row id="collectButtonRow"><Button id="homeToBlogButton" as={Link} to={"/blog"} variant="secondary">Learn More</Button></Row>
                 </Col>
-                <Col><img src={empathy} alt="connection" /></Col>
+                <Col><img width={650} src={pathicConnection} alt="connection" /></Col>
             </Row>
         </Container>
 

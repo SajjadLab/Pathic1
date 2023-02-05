@@ -34,7 +34,7 @@ function Pathic () {
           setCurrentYear(searchInput);
           setSearchBox(false);
           setSearchInput("");
-          fetch("http://localhost:5050/Pathic/" + currentYear)
+          fetch("http://165.232.156.241/Pathic/" + currentYear)
                 .then(results => results.json())
                 .then(data => {
                   setTgjs(data);
