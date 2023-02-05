@@ -23,6 +23,10 @@ function About() {
   const [displayPathic, setDisplayPathic] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     const handleScroll = e => {
       setScrollPosition(window.scrollY);
       console.log(scrollPosition);
@@ -33,7 +37,7 @@ function About() {
       if(window.scrollY >= 1600) {
         setDisplayPropbot(true);
       }
-      if(window.scrollY >= 5100) {
+      if(window.scrollY >= 4800) {
         setDisplayPathic(true);
       }
     }
@@ -75,7 +79,7 @@ function About() {
               </Carousel.Item>
               <Carousel.Item>
                 <div id="internationalRelations">
-                  <h3>Introduction to IR</h3>
+                  <h3>International Relations</h3>
                   <p>Applied knowledge I had accumulated during personal reading in a formal academic environment. Sharpened my essay writing abilities while writing on topics that straddle the line between politics and engineering with regard to climate change.</p>
                 </div>
               </Carousel.Item>
@@ -92,7 +96,7 @@ function About() {
         <Row id="propbotRow" {...(displayPropbot?{class: "row revealContent"}:{})}>
           <Row><h2>Propbot</h2></Row>
           <Row><p>Propbot is a Capstone Project I worked on for the UBC Radio Science Lab along with my colleagues. Propbot is a semi-autonomous robot capable of carrying measurement equipment around to data collection points of interest.</p></Row>
-          <Row id="propbotVideoRow"><iframe width="1066" height="600" src="https://www.youtube.com/embed/8sedLmPvChM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></Row>
+          <Row id="propbotVideoRow"><iframe width="900" height="600" src="https://www.youtube.com/embed/8sedLmPvChM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></Row>
           <Row id="postPropbotFrameRow">
             <Row>
               <Col><h4>I led the Power Team</h4></Col>
@@ -112,59 +116,61 @@ function About() {
         <Row id="pathicRow" {...(displayPathic?{class: "row revealContent"}:{})}>
           <Row><h2>Developing Pathic</h2></Row>
           <Row><p>Pathic is a long term personal research project I have been working on. I am interested in modelling the historical world and creating an interactive and intuitive environment for those models.</p></Row>
-          <Row><img width={650} src={pathicConnection} alt="connection" /></Row>
+          <Row><img width={600} src={pathicConnection} alt="connection" /></Row>
           <Row><h2>Pathic Keyboard</h2></Row>
           <Row><p>I researched, purchased, soldered, and built a customer wireless split keyboard for advanced human-computer interfacing. <a href="/blog/6387c89fcfe4d7470cfda911">Learn more here</a></p></Row>
-          <Row><img width={650} src={keyboard} alt="keyboard" /></Row>
+          <Row><img width={600} src={keyboard} alt="keyboard" /></Row>
           <Row><h2>Some Things I've Learned on the Way</h2></Row>
-          <Row>
-            <Col><h3>Software</h3></Col>
-            <Col>
-              <Row><h5>HTML and CSS</h5></Row>
-              <Row><h5>React</h5></Row>
-              <Row><h5>MongoDB</h5></Row>
-              <Row><h5>Python</h5></Row>
-            </Col>
-          </Row>
+          <Row id="thingsLearnedRow">
+            <Row>
+              <Col><h3>Software</h3></Col>
+              <Col>
+                <Row><h5>HTML and CSS</h5></Row>
+                <Row><h5>React</h5></Row>
+                <Row><h5>MongoDB</h5></Row>
+                <Row><h5>Python</h5></Row>
+              </Col>
+            </Row>
 
-          <Row>
-            <Col><h3>Hardware</h3></Col>
-            <Col>
-              <Row><h5>SolidWorks</h5></Row>
-              <Row><h5>3D Printing</h5></Row>
-              <Row><h5>Soldering</h5></Row>
-              <Row><h5>PCB Layout</h5></Row>
-            </Col>
-          </Row>
+            <Row>
+              <Col><h3>Hardware</h3></Col>
+              <Col>
+                <Row><h5>SolidWorks</h5></Row>
+                <Row><h5>3D Printing</h5></Row>
+                <Row><h5>Soldering</h5></Row>
+                <Row><h5>PCB Layout</h5></Row>
+              </Col>
+            </Row>
 
-          <Row>
-            <Col><h3>Design</h3></Col>
-            <Col>
-              <Row><h5>Complex Models</h5></Row>
-              <Row><h5>UX/UI</h5></Row>
-              <Row><h5>Photo Editing</h5></Row>
-              <Row><h5>Video Editing</h5></Row>
-            </Col>
-          </Row>
+            <Row>
+              <Col><h3>Design</h3></Col>
+              <Col>
+                <Row><h5>Complex Models</h5></Row>
+                <Row><h5>UX/UI</h5></Row>
+                <Row><h5>Photo Editing</h5></Row>
+                <Row><h5>Video Editing</h5></Row>
+              </Col>
+            </Row>
 
-          <Row>
-            <Col><h3>History</h3></Col>
-            <Col>
-              <Row><h5>Ancient Rome</h5></Row>
-              <Row><h5>Medieval Europe</h5></Row>
-              <Row><h5>Medieval England</h5></Row>
-              <Row><h5>Renaissance and Reformation</h5></Row>
-            </Col>
-          </Row>
+            <Row>
+              <Col><h3>History</h3></Col>
+              <Col>
+                <Row><h5>Ancient Rome</h5></Row>
+                <Row><h5>Medieval Europe</h5></Row>
+                <Row><h5>Medieval England</h5></Row>
+                <Row><h5>Renaissance and Reformation</h5></Row>
+              </Col>
+            </Row>
 
-          <Row id="booksRow">
-            <Col><h3>Books</h3></Col>
-            <Col>
-              <Row><Col><h5>Guns, Germs and Steel</h5></Col><Col><h5>- Jared Diamond</h5></Col></Row>
-              <Row><Col><h5>The Republic</h5></Col><Col><h5>- Plato</h5></Col></Row>
-              <Row><Col><h5>The Prince</h5></Col><Col><h5>- Niccolo Machiavelli</h5></Col></Row>
-              <Row><Col><h5>Gödel Escher Bach</h5></Col><Col><h5>- Douglas Hofstadter</h5></Col></Row>
-            </Col>
+            <Row id="booksRow">
+              <Col><h3>Books</h3></Col>
+              <Col>
+                <Row><Col><h5>Guns, Germs and Steel</h5></Col><Col><h5>Jared Diamond</h5></Col></Row>
+                <Row><Col><h5>The Republic</h5></Col><Col><h5>Plato</h5></Col></Row>
+                <Row><Col><h5>The Prince</h5></Col><Col><h5>Niccolo Machiavelli</h5></Col></Row>
+                <Row><Col><h5>Gödel Escher Bach</h5></Col><Col><h5>Douglas Hofstadter</h5></Col></Row>
+              </Col>
+            </Row>
           </Row>
         </Row>
       

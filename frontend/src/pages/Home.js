@@ -23,6 +23,10 @@ function Home() {
   const [displayConnect, setDisplayConnect] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     const handleScroll = e => {
       setScrollPosition(window.scrollY);
       //console.log(window.scrollY);
@@ -35,7 +39,7 @@ function Home() {
         setDisplayInteract(true);
       }
 
-      if(window.scrollY >=1600) {
+      if(window.scrollY >=1450) {
         setDisplayConnect(true);
       }
     }
@@ -91,7 +95,7 @@ function Home() {
                     <Row><p>Enjoy lively, data driven debates with the greatest thinkers, alive or otherwise</p></Row>
                     <Row id="collectButtonRow"><Button id="homeToBlogButton" as={Link} to={"/blog"} variant="secondary">Learn More</Button></Row>
                 </Col>
-                <Col><img width={650} src={pathicConnection} alt="connection" /></Col>
+                <Col id="connectLogoRow"><img width={650} src={pathicConnection} alt="connection" /></Col>
             </Row>
         </Container>
 

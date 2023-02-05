@@ -15,6 +15,10 @@ function BlogHome() {
   const [content, setContent] = useState(null);
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
+  useEffect(() => {
     const handleScroll = e => {
       setScrollPosition(window.scrollY);
     }

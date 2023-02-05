@@ -9,7 +9,7 @@ body {
 
 #pathicHeader {
   height: 100vh;
-  padding: 8rem 1rem 4rem 1rem;
+  padding: 8rem 1rem 0rem 1rem;
 }
 
 #pathicLogoRow {
@@ -30,7 +30,7 @@ body {
 }
 
 #pathicHeader h1 {
-  font-size: 100px;
+  font-size: 80px;
   max-width: 560px;
   text-align: center;
 }
@@ -46,7 +46,7 @@ body {
 }
 
 #homeContent {
-  padding: 5rem 3rem;
+  padding: 2rem 2rem;
 }
 
 .revealContent {
@@ -56,7 +56,7 @@ body {
 
 #collectContent {
   min-height: 70vh;
-  padding: 2rem 0;
+  padding: 3rem 0;
   opacity: 0;
 }
 
@@ -84,7 +84,7 @@ body {
 
 #interactContent {
   min-height: 70vh;
-  padding: 1rem 0;
+  padding: 3rem 0;
   opacity: 0;
 }
 
@@ -116,7 +116,7 @@ body {
 
 #connectContent {
   min-height: 70vh;
-  padding: 5rem 0;
+  padding: 3rem 0;
   opacity: 0;
 }
 
@@ -135,6 +135,10 @@ body {
 
 #connectButtonRow {
   padding-left: 3rem;
+}
+
+#connectLogoRow img {
+  padding-left: 1rem;
 }
 
 @media (min-width: 600px) {
@@ -559,7 +563,7 @@ body {
 }
 
 .carousel-item p {
-  max-width: 60rem;
+  max-width: 30rem;
   padding-top: 1rem;
   padding-left: 2rem;
 }
@@ -602,6 +606,10 @@ body {
   padding: 4rem 0;
 }
 
+#postPropbotFrameRow img {
+  max-width: 340px;
+}
+
 #pathicRow {
   min-height: 150vh;
   padding: 3rem 1rem 3rem 1rem;
@@ -616,6 +624,19 @@ body {
 
 #pathicRow img {
   padding: 3rem 0rem 6rem 1rem;
+}
+
+#thingsLearnedRow {
+  padding: 2rem 2rem;
+}
+
+#thingsLearnedRow > .row {
+  padding: 1rem 0;
+  border-top: 1px solid black;
+}
+
+#thingsLearnedRow h5 {
+  font-size: medium;
 }
 
 #booksRow h5{
@@ -670,19 +691,19 @@ body {
   }
 
   #educationCol h2 {
-    max-width: 640px;
+    max-width: 600px;
     padding: 1rem 6rem;
   }
 
   .carousel-item h3 {
     padding-top: 5rem;
-    padding-left: 16rem;
+    padding-left: 12rem;
   }
 
   .carousel-item p {
     max-width: 80rem;
     padding-top: 1rem;
-    padding-left: 17rem;
+    padding-left: 13rem;
   }
 
   #propbotRow {
@@ -744,5 +765,22 @@ body {
 
   #pathicRow img {
     padding: 3rem 0;
+  }
+
+  #thingsLearnedRow {
+    padding: 2rem 10rem;
+  }
+
+  #thingsLearnedRow > .row {
+    padding: 1rem 0;
+    border-top: 1px solid black;
+  }
+
+  #booksRow h5{
+    font-size: large;
+  }
+
+  #booksRow .col {
+    max-width: 50%;
   }
 }
