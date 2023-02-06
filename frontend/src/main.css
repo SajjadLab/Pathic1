@@ -148,6 +148,139 @@ body {
 
   #pathicHeader {
     height: 100vh;
+    padding: 12rem 3rem 8rem 3rem;
+  }
+
+  #pathicLogoRow {
+    justify-content: center;
+  }
+
+  #pathicTitleRow {
+    justify-content: center;
+  }
+
+  #headerCol2 {
+    padding-right: 2rem;
+  }
+
+  #pathicHeader #pathicLogo {
+    width: 200px;
+    height: 100px;
+  }
+
+  #pathicHeader h1 {
+    font-size: 100px;
+    max-width: 560px;
+    text-align: center;
+  }
+
+  #pathicHeader h2 {
+    font-size: 40px;
+    max-width: 280px;
+    padding: 0 1rem;
+  }
+
+  #throughTimeRow  {
+    justify-content: right;
+  }
+
+  #homeContent {
+    padding: 5rem 3rem;
+  }
+
+  .revealContent {
+    transition: opacity 1.5s;
+    opacity: 1 !important;
+  }
+
+  #collectContent {
+    min-height: 70vh;
+    padding: 5rem 0;
+    opacity: 0;
+  }
+
+  #collectContent p {
+    max-width: 550px;
+    padding-left: 1.5rem;
+  }
+
+  #collectContent img {
+    max-width: 500px;
+  }
+
+  #collectContentCol {
+    padding: 2rem 0;
+  }
+
+  #collectButtonRow {
+    padding-left: 3rem;
+  }
+
+  #homeToBlogButton {
+    max-width: 250px;
+    background-color: black;
+  }
+
+  #interactContent {
+    min-height: 70vh;
+    padding: 5rem 0;
+    opacity: 0;
+  }
+
+  #interactContent .col {
+    justify-content: right;
+  }
+
+  #interactContent img {
+    max-width: 500px;
+  }
+
+
+  #interactContentCol {
+    padding: 2rem 0;
+  }
+
+  #interactContent p {
+    padding-right: 2.5rem;
+    text-align: right;
+  }
+
+  #interactButtonRow {
+    padding-right: 5rem;
+    justify-content: right;
+  }
+
+  #connectContent {
+    min-height: 70vh;
+    padding: 5rem 0;
+    opacity: 0;
+  }
+
+  #connectContent p {
+    max-width: 550px;
+    padding-left: 1.5rem;
+  }
+
+  #connectContent img {
+    max-width: 500px;
+  }
+
+  #connectContentCol {
+    padding: 2rem 0;
+  }
+
+  #connectButtonRow {
+    padding-left: 3rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .homeContainer {
+    overflow-x: hidden;
+  }
+
+  #pathicHeader {
+    height: 100vh;
     padding: 16rem 3rem 8rem 3rem;
   }
 
@@ -678,6 +811,144 @@ body {
 
   #educationRow {
     min-height: 120vh;
+    padding: 8rem 1rem 4rem 3rem;
+    opacity: 0;
+  }
+
+  #educationRow img {
+    max-width: 400px;
+  }
+
+  #educationCol {
+    padding: 1.5rem 0;
+  }
+
+  #educationCol h2 {
+    max-width: 600px;
+    padding: 1rem 2rem;
+  }
+
+  .carousel-item h3 {
+    padding-top: 5rem;
+    padding-left: 4rem;
+  }
+
+  .carousel-item p {
+    max-width: 4rem;
+    padding-top: 1rem;
+    padding-left: 5rem;
+  }
+
+  #propbotRow {
+    min-height: 120vh;
+    padding: 6rem 3rem 6rem 3rem;
+    opacity: 0;
+  }
+
+  #propbotRow h2 {
+    padding-left: 2rem;
+    height: 3rem;
+  }
+
+  #propbotRow p {
+    min-height: 6rem;
+    max-width: 1350px;
+    padding-left: 4rem;
+  }
+
+  #propbotVideoRow {
+    min-height: 60vh;
+  }
+
+  #postPropbotFrameRow {
+    min-height: 120vh;
+    padding: 4rem 0rem 0rem 4rem;
+  }
+
+  #postPropbotFrameRow h4 {
+    padding-top: 4rem;
+  }
+
+  #postPropbotFrameRow .row {
+    padding: 4rem 0;
+  }
+
+  #postPropbotFrameRow img {
+    max-width: 500px;
+  }
+
+  #pathicRow {
+    min-height: 150vh;
+    padding: 4rem 3rem 4rem 3rem;
+    opacity: 0;
+  }
+
+  #pathicRow h2 {
+    padding-top: 2rem;
+    padding-left: 2rem;
+    height: 5rem;
+  }
+
+  #pathicRow p {
+    height: 6rem;
+    max-width: 1350px;
+    padding-left: 4rem;
+  }
+
+
+  #pathicRow img {
+    padding: 3rem 0;
+  }
+
+  #thingsLearnedRow {
+    padding: 1rem 3rem;
+  }
+
+  #thingsLearnedRow > .row {
+    padding: 1rem 0;
+    border-top: 1px solid black;
+  }
+
+  #booksRow h5{
+    font-size: medium;
+  }
+
+  #booksRow .col {
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #aboutHeader {
+    min-height: 120vh;
+    padding: 12rem 3rem 6rem 3rem;
+    justify-content: center;
+  }
+
+  #aboutHeader h1 {
+    text-align: right;
+    padding-right: 8rem;
+  }
+
+  #headshot-button {
+    margin: 0;
+    width: 350px;
+    height: 350px;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  #headshot-button-img {
+    position: relative;
+    width: 350px;
+    height: auto;
+    border-radius: 50%;
+    margin: 0;
+    padding: 0;
+  }
+
+  #educationRow {
+    min-height: 120vh;
     padding: 12rem 3rem 6rem 3rem;
     opacity: 0;
   }
@@ -697,18 +968,18 @@ body {
 
   .carousel-item h3 {
     padding-top: 5rem;
-    padding-left: 12rem;
+    padding-left: 10rem;
   }
 
   .carousel-item p {
-    max-width: 80rem;
+    max-width: 75rem;
     padding-top: 1rem;
-    padding-left: 13rem;
+    padding-left: 11rem;
   }
 
   #propbotRow {
     min-height: 120vh;
-    padding: 6rem 3rem 6rem 3rem;
+    padding: 6rem 3rem 0rem 3rem;
     opacity: 0;
   }
 
@@ -720,7 +991,7 @@ body {
   #propbotRow p {
     height: 6rem;
     max-width: 1350px;
-    padding-left: 10rem;
+    padding-left: 6rem;
   }
 
   #propbotVideoRow {
@@ -752,23 +1023,23 @@ body {
 
   #pathicRow h2 {
     padding-top: 2rem;
-    padding-left: 4rem;
+    padding-left: 3rem;
     height: 5rem;
   }
 
   #pathicRow p {
     height: 6rem;
     max-width: 1350px;
-    padding-left: 10rem;
+    padding-left: 6rem;
   }
 
 
   #pathicRow img {
-    padding: 3rem 0;
+    padding: 0 0 5rem;
   }
 
   #thingsLearnedRow {
-    padding: 2rem 10rem;
+    padding: 2rem 8rem;
   }
 
   #thingsLearnedRow > .row {
@@ -777,7 +1048,7 @@ body {
   }
 
   #booksRow h5{
-    font-size: large;
+    font-size: medium;
   }
 
   #booksRow .col {

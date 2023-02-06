@@ -37,7 +37,7 @@ function About() {
       if(window.scrollY >= 1600) {
         setDisplayPropbot(true);
       }
-      if(window.scrollY >= 4800) {
+      if(window.scrollY >= 4750) {
         setDisplayPathic(true);
       }
     }
