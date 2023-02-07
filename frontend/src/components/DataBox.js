@@ -11,7 +11,7 @@ function DataBox(props) {
         if(props.data[0] !== undefined) {
             if (elementDisplay == null) {
 
-                fetch("http://localhost:5050/Tempath/" + props.data[0])
+                fetch("http://165.232.156.241/Tempath/" + props.data[0])
                     .then(results => results.json())
                     .then(data => {
                         setElementDisplay(data);
