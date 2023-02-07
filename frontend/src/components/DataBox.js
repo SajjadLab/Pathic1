@@ -6,23 +6,22 @@ import Row from "react-bootstrap/esm/Row";
 
 function DataBox(props) {
     const [elementDisplay, setElementDisplay] = useState(null);
-    const [chainDisplay, setChainDisplay] = useState(null);
 
     useEffect(() => {
         if(props.data[0] !== undefined) {
             if (elementDisplay == null) {
 
-                fetch("http://165.232.156.241/Tempath/" + props.data[0])
+                fetch("http://localhost:5050/Tempath/" + props.data[0])
                     .then(results => results.json())
                     .then(data => {
                         setElementDisplay(data);
                     })
-                console.log(elementDisplay);
             }
         }
     })
 
     if (elementDisplay) {
+        console.log(elementDisplay);
 
 
         return (
@@ -41,7 +40,7 @@ function DataBox(props) {
                     <h5>Interpretation: {elementDisplay.interpretation}</h5>
                 </Row>
                 <Row>
-                    <h5>Chain: {chainDisplay}</h5>
+                    <h5>Chain: {JSON.stringify(elementDisplay.chain[0])}</h5>
                 </Row>
                 <Row>
                     <h5>Reliability: {elementDisplay.reliability}</h5>

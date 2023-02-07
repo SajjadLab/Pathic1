@@ -518,9 +518,9 @@ body {
   font-size: small;
 }
 
-#blogContent > p {
-  padding: 1rem 0.5rem;
+#blogContent p {
   font-size: medium;
+  font-family: 'Noto Serif Devanagari' !important;
 }
 
 @media (min-width: 576px) {
@@ -546,9 +546,9 @@ body {
     padding: 0.5rem 3rem;
   }
 
-  #blogContent > p {
-    padding: 2rem 4rem;
+  #blogContent p {
     font-size: large;
+    font-family: 'Noto Serif Devanagari' !important;
   }
 }
 
@@ -575,30 +575,33 @@ body {
     padding: 0.5rem 3rem;
   }
 
-  #blogContent > p {
-    padding: 2rem 4rem;
+  #blogContent p {
     font-size: large;
+    font-family: 'Noto Serif Devanagari' !important;
   }
 }
 
 /*PATHIC*/
 
+#pathicMap {
+  overflow: hidden;
+  display: none;
+}
+
 #cesiumContainer {
   position: relative;
-  overflow: hidden;
   height: max-content;
 }
 
-
 #searchBox {
   position: fixed;
-  top: 50px;
-  right: 40%;
+  top: 18vh;
+  left: 25vw;
   z-index: 99;
   overflow: hidden;
   font-size: large;
-  height: 80px; 
-  width: 500px;
+  height: 10vh; 
+  width: 50vw;
 }
 
 .hidden {
@@ -608,15 +611,15 @@ body {
 #dataBox {
   position: fixed;
   top: 120px;
-  right: 5%;
+  right: 2%;
   z-index: 99;
-  font-size: large;
-  height: 650px;
-  width: 500px;
+  height: 60vh;
+  width: 35vw;
   background-color: white;
   opacity: 60%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
-
 
 #dataBox .row {
   padding: 0.15rem 0;
@@ -627,12 +630,94 @@ body {
   opacity: 1 !important;
 }
 
+#dataBoxCol h1 {
+  font-size: medium;
+}
+
+#dataBoxCol h5 {
+  font-size: small;
+}
+
+#dataBoxCol h6 {
+  font-size: x-small;
+}
+
 #dataBoxRow2 {
   border-top: 1px solid black;
 }
 
 #dataBoxRow4 {
   border-top: 1px solid black;
+}
+
+@media (min-width: 800px) {
+  #pathicMap {
+    overflow: hidden;
+    display:inline;
+  }
+
+  #cesiumContainer {
+    position: relative;
+    height: max-content;
+  }
+
+  #searchBox {
+    position: fixed;
+    top: 10vh;
+    left: 25vw;
+    z-index: 99;
+    overflow: hidden;
+    font-size: large;
+    height: 10vh; 
+    width: 50vw;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  #dataBox {
+    position: fixed;
+    top: 120px;
+    right: 5%;
+    z-index: 99;
+    font-size: medium;
+    height: 60vh;
+    width: 32vw;
+    background-color: white;
+    opacity: 60%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  #dataBox .row {
+    padding: 0.15rem 0;
+  }
+
+  #dataBoxCol {
+    padding: 1rem 1rem;
+    opacity: 1 !important;
+  }
+
+  #dataBoxCol h1 {
+    font-size: larger;
+  }
+
+  #dataBoxCol h5 {
+    font-size: medium;
+  }
+
+  #dataBoxCol h6 {
+    font-size: small;
+  }
+
+  #dataBoxRow2 {
+    border-top: 1px solid black;
+  }
+
+  #dataBoxRow4 {
+    border-top: 1px solid black;
+  }
 }
 
 /*FOOTER*/

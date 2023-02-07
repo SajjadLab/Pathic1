@@ -66,7 +66,7 @@ function Pathic () {
 
   useEffect(() => {
     if(tgjs == null) {
-    fetch("http://165.232.156.241/Pathic")
+    fetch("http://165.232.156.241/pathic")
       .then(results => results.json())
       .then(data => {
         setTgjs(data);
